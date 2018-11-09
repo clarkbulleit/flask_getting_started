@@ -11,11 +11,14 @@ if __name__ == "__main__":
     r2 = requests.get("http://127.0.0.1:5001/hello/Clark")
     r3 = requests.post("http://127.0.0.1:5001/distance", json=distance)
 
-    # r2 = requests.post("http://vcm-7335.vm.duke.edu:5000/distance", json=distance)
+    # r1 = requests.get("http://vcm-7335.vm.duke.edu:5000/name")
+    # r2 = requests.get("http://vcm-7335.vm.duke.edu:5000/hello/Clark")
+    # r3 = requests.post("http://vcm-7335.vm.duke.edu:5000/distance", json=distance)
+
     name = r1
     Clark = r2.json()
     distance = r3.json()
 
-    print(name)
+    print(name.text)
     print(Clark)
     print(distance)
